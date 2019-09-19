@@ -38,3 +38,6 @@ $ npm run dist
 - Node.js Documents - https://nodejs.org/ko/docs/
 - Express Documents - https://expressjs.com/ko/guide/routing.html
 - Webpack 4 Documents - https://webpack.js.org/concepts/
+
+### Study Video ###
+https://github.com/SimDaeSoo/PL-Homepage-Study
