@@ -5,8 +5,6 @@ const baseConfig = require('./webpack.base.config');
 const webpackConfig = merge(baseConfig, {
     mode: 'development',
     devServer: {
-        open: true,
-        hot: true
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()

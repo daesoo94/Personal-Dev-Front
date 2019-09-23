@@ -1,15 +1,14 @@
 <template>
-  <div class="Home" ref="Home">
+  <div class="footer">
   </div>
 </template>
 
-<script lang = "ts">
+<script lang='ts'>
 import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component
-export default class Home extends Vue {
+export default class Footer extends Vue {
   mounted() {
-    console.log('hello world');
   }
 }
 </script>

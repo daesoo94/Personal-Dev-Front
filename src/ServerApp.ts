@@ -2,6 +2,7 @@ import * as http from "http";
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as path from "path";
+import * as fs from 'fs';
 
 // Electron과 함께 사용하게 될 것 같다.
 class ServerApp {
@@ -16,7 +17,7 @@ class ServerApp {
     public async initialize(): Promise<void> {
         this.middleware();
         this.routes();
-        this.setNormalizePort(7000);
+        this.setNormalizePort(80);
     }
 
     public createServer(): void {
@@ -27,7 +28,7 @@ class ServerApp {
     }
 
     private setNormalizePort(port: number): void {
-        this.port = this.normalizePort(port);
+        this.port = port;
     }
 
     private middleware(): void {
@@ -39,23 +40,13 @@ class ServerApp {
         // 음.. 라우터를 달아야 하는데 우선 다 리턴하게 만들어둠.
         this.express.get("*", (req: express.Request, res: express.Response, next: express.NextFunction): any => {
             const filePath: string = path.join("dist", req.url);
-            res.sendfile(filePath);
+            const isFile: boolean = fs.existsSync(filePath);
+            if (isFile) {
+                res.sendfile(filePath);
+            } else {
+                res.sendfile(path.join("dist", "index.html"));
+            }
         });
-        this.express.get("/", (req: express.Request, res: express.Response, next: express.NextFunction): any => {
-            const filePath: string = path.join("dist", "index.html");
-            res.sendfile(filePath);
-        });
-    }
-
-    private normalizePort(val: number | string): number | string | boolean {
-        const normalizedPort: number = (typeof val === "string") ? parseInt(val, 10) : val;
-        if (isNaN(normalizedPort)) {
-            return val;
-        } else if (normalizedPort >= 0) {
-            return normalizedPort;
-        } else {
-            return false;
-        }
     }
 }
 

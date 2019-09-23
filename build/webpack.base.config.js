@@ -47,11 +47,7 @@ const webpackConfig = {
         new VueLoaderPlugin()
     ],
     resolve: {
-        extensions: ['.ts', '.js', '.json'],
-        alias: {
-            assets: path.resolve('src/assets/'),
-            json: path.resolve('src/json/')
-        }
+        extensions: ['.ts', '.js', '.json']
     }
 };
 
