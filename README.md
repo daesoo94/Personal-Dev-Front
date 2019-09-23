@@ -1,6 +1,6 @@
-PL Laboratory Hompage - Front End
+PL Laboratory Personal Dev Hompage - Front End
 =============
-- 앞으로 PL 홈페이지 Front를 만들면서 생기는 과정을 History로 남긴다.
+- 앞으로 PL랩원의 개인 홈페이지 Front를 만들면서 생기는 과정을 History로 남긴다.
 
 ### How To Run? ###
 - dependency install
