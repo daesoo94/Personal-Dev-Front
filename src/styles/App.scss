@@ -7,6 +7,7 @@
    font-family: "Avenir Next", "Avenir", sans-serif;
  }
  
+// Header
  a
  {
    text-decoration: none;
@@ -136,6 +137,41 @@
      font-size: 3em;
      background-color: rgba(50,50,50,1);
  }
+// End Header
+
+// Card https://codepen.io/ian-s/pen/NOeOWO
+.cardSlider {
+  width: 70vw;
+  overflow: auto;
+  max-width: 650px;
+  max-height: 650px;
+  height: auto;
+  outline: 1px dotted red;
+  white-space: nowrap;
+  margin: auto;
+  overflow-y: hidden;
+}
+.card {
+  width: 70vw;
+  height: 70vw;
+  max-width: 650px;
+  max-height: 650px;
+  display: inline-flex;
+  outline: 1px dotted green;
+  overflow: hidden;
+}
+.inner {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  font-size: 300%;
+}
+
+.inner img {
+  width: 100%;
+  height: 100%;
+}
+// End Card
 
  .content {
     padding-top: 120px;
@@ -143,4 +179,15 @@
 
  .title {
      text-align: center;
+ }
+
+ ul {
+  list-style-type : none;
+  margin: 0;
+  padding: 0;
+ }
+ .article {
+   padding: 10 10 10 10;
+   border-color: cornsilk;
+   border-style: dashed;
  }

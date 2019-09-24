@@ -25,6 +25,7 @@
   "dependencies": {
     "@types/express": "^4.16.0",
     "@types/node": "^11.11.4",
+    "copy-webpack-plugin": "^5.0.4",
     "express": "^4.16.4",
     "file-loader": "^4.2.0",
     "node-sass": "^4.12.0",
