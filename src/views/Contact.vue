@@ -1,19 +1,19 @@
 <template>
-  <div class="main">
-    <ArticleList/>
-  </div>
+  <DefaultLayout>
+    Hello I'm Contact Page
+  </DefaultLayout>
 </template>
 
 <script lang = "ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
-import ArticleList from '../components/ArticleList.vue';
+import DefaultLayout from '../layout/DefaultLayout.vue';
 
 @Component({
   components: {
-    ArticleList
+    DefaultLayout
   }
 })
-export default class Main extends Vue {
+export default class Contact extends Vue {
   mounted() {
   }
 }

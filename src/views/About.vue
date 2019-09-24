@@ -1,6 +1,6 @@
 <template>
   <DefaultLayout>
-    Hello I'm Login Page
+    Hello I'm About Page
   </DefaultLayout>
 </template>
 
@@ -13,7 +13,7 @@ import DefaultLayout from '../layout/DefaultLayout.vue';
     DefaultLayout
   }
 })
-export default class Login extends Vue {
+export default class About extends Vue {
   mounted() {
   }
 }
