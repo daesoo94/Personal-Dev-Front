@@ -1,5 +1,6 @@
 <template>
-  <div class="header">
+  <div class="content">
+    <slot/>
   </div>
 </template>
 
@@ -7,7 +8,7 @@
 import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component
-export default class Header extends Vue {
+export default class Content extends Vue {
   mounted() {
   }
 }

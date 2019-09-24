@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <Header/>
-    <Content/>
+    <Content>
+      <router-view/>
+    </Content>
     <Footer/>
   </div>
 </template>
 
 <script lang = "ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
-import Header from './components/Header.vue';
-import Content from './components/Content.vue';
-import Footer from './components/Footer.vue';
+import Header from './layout/Header.vue';
+import Content from './layout/Content.vue';
+import Footer from './layout/Footer.vue';
 
 @Component({
   components: {
